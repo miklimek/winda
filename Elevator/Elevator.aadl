@@ -1,0 +1,303 @@
+package Elevator
+public
+	with Base_Types;
+	with Data_Model;
+	with sei;
+	
+	data DoorState
+		properties
+			Data_Model::Data_Representation => Enum;
+	end DoorState;
+	
+	data implementation DoorState.impl
+	end DoorState.impl;
+	
+	data EngineState
+		properties
+			Data_Model::Data_Representation => Enum;
+	end EngineState;
+	
+	data implementation EngineState.impl
+	end EngineState.impl;
+	
+	data DisplayState
+		properties
+			Data_Model::Data_Representation => Enum;
+	end DisplayState;
+	
+	data implementation DisplayState.impl
+	end DisplayState.impl;
+	
+	------------------------------------------------
+		
+	system ElevatorSystem
+	end ElevatorSystem;
+	
+	bus internal_bus
+	end internal_bus;
+	
+	bus implementation internal_bus.impl
+		properties
+  			SEI::BandWidthCapacity => 2.0 MBytesps;
+  			SEI::BandWidthBudget => 200.0 KBytesps;
+	end internal_bus.impl;
+	
+	device CallButton
+		features
+			call_button_press: out data port Base_Types::Integer;
+			bus_access: requires bus access internal_bus;
+	end CallButton;
+	
+	device implementation CallButton.impl
+	end CallButton.impl;
+	
+	device FloorButtons
+	features
+		button_press: out data port Base_Types::Integer;
+		bus_access: requires bus access internal_bus;
+	end FloorButtons;
+	
+	device implementation FloorButtons.impl
+	end FloorButtons.impl;
+	
+	device DoorButton
+		features
+			pressed: out data port DoorState;
+			bus_access: requires bus access internal_bus;
+	end DoorButton;
+	
+	device implementation DoorButton.impl
+	end DoorButton.impl;
+	
+	device FloorDisplay
+		features
+			currentFloor: in data port Base_Types::Integer;
+			bus_access: requires bus access internal_bus;
+	end FloorDisplay;
+	
+	device implementation FloorDisplay.impl
+	end FloorDisplay.impl;
+	
+	device UpDownDisplay
+		features
+			upDown: in data port DisplayState;
+			bus_access: requires bus access internal_bus;
+	end UpDownDisplay;
+	
+	device implementation UpDownDisplay.impl
+	end UpDownDisplay.impl;
+	
+	device ElevatorDoor
+		features
+			state: in data port DoorState;
+			bus_access: requires bus access internal_bus;
+	end ElevatorDoor;
+	
+	device implementation ElevatorDoor.impl
+	end ElevatorDoor.impl;
+	
+	device Engine
+		features
+			direction: in data port EngineState;
+			bus_access: requires bus access internal_bus;
+	end Engine;
+	
+	device implementation Engine.impl
+	end Engine.impl;
+	
+	device FloorSensor
+		features
+			reachedFloor_out: out data port Base_Types::Integer;
+			reachedFloor_in: in data port Base_Types::Integer;
+			bus_access: requires bus access internal_bus;
+	end FloorSensor;
+	
+	device implementation FloorSensor.impl
+	end FloorSensor.impl;
+	
+	---------------------------------------------------------
+	
+	processor MainProcessor
+		features
+			bus_access: requires bus access internal_bus;
+	end MainProcessor;
+	
+	processor implementation MainProcessor.impl
+	end MainProcessor.impl;
+	
+	---------------------------------------------------------
+	
+	thread displayFloor
+		features
+			floor_in: in data port Base_Types::Integer;
+			floor_out: out data port Base_Types::Integer;
+	end displayFloor;
+	
+	thread implementation displayFloor.impl
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 100ms;
+			Compute_Execution_Time => 1 ms .. 20 ms;
+	end displayFloor.impl;
+	
+	thread displayUpDown
+		features
+			upDown_in: in data port DisplayState;
+			upDown_out: out data port DisplayState;
+	end displayUpDown;
+	
+	thread implementation displayUpDown.impl
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 100ms;
+			Compute_Execution_Time => 1 ms .. 20 ms;
+	end displayUpDown.impl;
+		
+	thread callToFloor
+		features
+			floor_in: in data port Base_Types::Integer;
+			floor_out: out data port Base_Types::Integer;
+	end callToFloor;
+	
+	thread implementation callToFloor.impl
+		properties
+			Dispatch_Protocol => Sporadic;
+			Deadline => 25ms;
+			Period => 20ms;
+			Compute_Execution_Time => 1 ms .. 10 ms;
+	end callToFloor.impl;
+	
+	thread moveToFloor
+		features
+			direction_in: in data port EngineState;
+			direction_out: out data port EngineState;
+	end moveToFloor;
+	
+	thread implementation moveToFloor.impl
+		properties
+			Dispatch_Protocol => Sporadic;
+			Period => 20ms;
+			Compute_Execution_Time => 1 ms .. 10 ms;
+	end moveToFloor.impl;
+	
+	thread openCloseDoor
+		features
+			doorState_in: in data port DoorState;
+			doorState_out: out data port DoorState;
+	end openCloseDoor;
+	
+	thread implementation openCloseDoor.impl
+		properties
+			Dispatch_Protocol => Sporadic;
+			Period => 150ms;
+			Compute_Execution_Time => 1 ms .. 50 ms;
+	end openCloseDoor.impl;
+	
+	thread detectFloors
+		features
+			currentFloor_in: in data port Base_Types::Integer;
+			newFloor_in: in data port Base_Types::Integer;
+			direction_out: out data port EngineState;
+			upDown_out: out data port DisplayState;
+			updatedFloor_out: out data port Base_Types::Integer;
+	end detectFloors;
+	
+	thread implementation detectFloors.impl
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 50ms;
+			Compute_Execution_Time => 1 ms .. 25 ms;
+	end detectFloors.impl;
+	
+	------------------------------------------------------
+	process moving_process
+		features
+			calledToFloor_in: in data port Base_Types::Integer;
+			currentFloor_in: in data port Base_Types::Integer;
+			direction: out data port EngineState;
+			floor_out: out data port Base_Types::Integer;
+			upDown_out: out data port DisplayState;
+			finalFloor_out: out data port Base_Types::Integer;
+	end moving_process;
+	
+	process implementation moving_process.impl
+		subcomponents
+			displayFloor_thr: thread displayFloor.impl;
+			displayUpDown_thr: thread displayUpDown.impl;
+			callToFloor_thr: thread callToFloor.impl;
+			moveToFloor_thr: thread moveToFloor.impl;
+			detectFloors_thr: thread detectFloors.impl;
+		connections
+			callToFloor: port calledToFloor_in -> callToFloor_thr.floor_in;
+			currentFloor: port currentFloor_in -> detectFloors_thr.currentFloor_in;
+			newFloor: port callToFloor_thr.floor_out -> detectFloors_thr.newFloor_in;
+			changeDirection_in: port detectFloors_thr.direction_out -> moveToFloor_thr.direction_in;
+			changeDirection_out: port moveToFloor_thr.direction_out -> direction;
+			displayCurrentFloor_in: port callToFloor_thr.floor_out -> displayFloor_thr.floor_in;
+			displayCurrentFloor_out: port displayFloor_thr.floor_out -> floor_out;
+			displayUpDown_in: port detectFloors_thr.upDown_out -> displayUpDown_thr.upDown_in;
+			displayUpDown_out: port displayUpDown_thr.upDown_out -> upDown_out;
+			updateFloor: port detectFloors_thr.updatedFloor_out -> finalFloor_out;
+	end moving_process.impl;
+	
+	process door_process
+		features
+			openClose_in: in data port DoorState;
+			openClose_out: out data port DoorState;
+	end door_process;
+	
+	process implementation door_process.impl
+		subcomponents
+			openClose_thr: thread openCloseDoor.impl;
+		connections
+			sendInput: port openClose_in -> openClose_thr.doorState_in;
+			result: port openClose_thr.doorState_out -> openClose_out;
+	end door_process.impl;
+	
+	--------------------------------------------------------------------------
+	
+	system implementation ElevatorSystem.impl
+	subcomponents
+		internal_bus : bus internal_bus;
+		engine: device Engine;
+		door: device ElevatorDoor;
+		callBtn: device CallButton;
+		floorBtn: device FloorButtons;
+		doorBtn: device DoorButton;
+		floorDisplay: device FloorDisplay;
+		upDownDisplay: device UpDownDisplay;
+		floorSensor: device FloorSensor;
+		
+		mainProcessor: processor MainProcessor.impl;
+		
+		moving_process: process moving_process;
+		door_process: process door_process;
+		
+		connections		
+		BA1: bus access internal_bus <-> engine.bus_access;
+		BA2: bus access internal_bus <-> door.bus_access;
+		BA3: bus access internal_bus <-> callBtn.bus_access;
+		BA4: bus access internal_bus <-> floorBtn.bus_access;
+		BA5: bus access internal_bus <-> floorDisplay.bus_access;
+		BA6: bus access internal_bus <-> upDownDisplay.bus_access;
+		BA7: bus access internal_bus <-> floorSensor.bus_access;
+		BA8: bus access internal_bus <-> doorBtn.bus_access;
+		BA9: bus access internal_bus <-> mainProcessor.bus_access;
+		
+		openCloseDoor: port doorBtn.pressed -> door_process.openClose_in;
+		changeDoorState: port door_process.openClose_out -> door.state;
+		callingConnection: port callBtn.call_button_press -> moving_process.calledToFloor_in;
+		callingConnection2: port floorBtn.button_press -> moving_process.calledToFloor_in;
+		getCurrentFloor: port floorSensor.reachedFloor_out -> moving_process.currentFloor_in;
+		changeDirection: port moving_process.direction -> engine.direction;
+		displayFloor: port moving_process.floor_out -> floorDisplay.currentFloor;
+		displayUpDown: port moving_process.upDown_out -> upDownDisplay.upDown;
+		updateFloor: port moving_process.finalFloor_out -> floorSensor.reachedFloor_in;
+		
+		properties
+			Actual_Processor_Binding => (reference(mainProcessor)) applies to moving_process;
+			Actual_Processor_Binding => (reference(mainProcessor)) applies to door_process;
+		
+	end ElevatorSystem.impl;
+	
+end Elevator;

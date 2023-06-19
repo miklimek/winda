@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="ea4862e4-0da4-462f-bff6-035c65607ee4" manual="true">
+    <element uuid="dffc7f4c-d5cd-40fe-b4c1-2624c85bad13" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA1</seg>
+      </bo>
+      <bendpoints>
+        <point x="646.0" y="378.0"/>
+        <point x="662.0" y="378.0"/>
+        <point x="662.0" y="127.0"/>
+        <point x="1466.0" y="127.0"/>
+        <point x="1466.0" y="170.0"/>
+        <point x="1486.0" y="170.0"/>
+        <point x="1486.0" y="210.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f1fcebc7-0dd1-42df-ab13-2f768e8d098b" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA2</seg>
+      </bo>
+      <bendpoints>
+        <point x="646.0" y="428.0"/>
+        <point x="652.0" y="428.0"/>
+        <point x="652.0" y="471.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="15dd946b-6588-4a1f-af1e-d37b43e87286" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA3</seg>
+      </bo>
+      <bendpoints>
+        <point x="646.0" y="398.0"/>
+        <point x="682.0" y="398.0"/>
+        <point x="682.0" y="310.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="060b6eb4-396c-41eb-acf6-513a1d7228f7" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA4</seg>
+      </bo>
+      <bendpoints>
+        <point x="646.0" y="408.0"/>
+        <point x="692.0" y="408.0"/>
+        <point x="692.0" y="390.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="dac3c097-36bf-4c34-93f3-cc88238a7b07" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA5</seg>
+      </bo>
+      <bendpoints>
+        <point x="646.0" y="368.0"/>
+        <point x="652.0" y="368.0"/>
+        <point x="652.0" y="80.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="bc3c969e-bd21-4f00-bf5b-f0de51e7efd6" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA6</seg>
+      </bo>
+      <bendpoints>
+        <point x="642.0" y="418.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="90b02c6f-5b62-4df1-9a92-1ee22ee5fed7" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA7</seg>
+      </bo>
+      <bendpoints>
+        <point x="646.0" y="388.0"/>
+        <point x="672.0" y="388.0"/>
+        <point x="672.0" y="205.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="702db93c-4356-4e81-b306-0045a020dacf" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA8</seg>
+      </bo>
+    </element>
+    <element uuid="ed9b9393-698b-428c-8e5c-4693a6f866f2" manual="true">
+      <bo>
+        <seg>connection</seg>
+        <seg>BA9</seg>
+      </bo>
+    </element>
+    <element uuid="6e8ccde7-b1f9-4616-ad4d-aab9a4c6dd12" manual="true">
+      <element uuid="341f93e5-aa13-4486-81b5-fa3925b1234c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>callingConnection</seg>
+      </bo>
+    </element>
+    <element uuid="22bc5e21-556f-47ef-aea1-b39e65d95678" manual="true">
+      <element uuid="ae4b39f2-db1d-49cb-8c9b-a42b60fb734c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>callingConnection2</seg>
+      </bo>
+      <bendpoints>
+        <point x="1070.0" y="390.0"/>
+        <point x="1070.0" y="310.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a01a406e-af12-4edd-b4af-f87b44bb82bf" manual="true">
+      <element uuid="82bce268-f375-4a2e-a0eb-8e6a4de34758" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>changeDirection</seg>
+      </bo>
+    </element>
+    <element uuid="b4e91230-1993-496e-a5b4-fe02113d7994" manual="true">
+      <element uuid="d6fd756c-0d99-43b2-ae2a-d5008bb3fe36" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>changeDoorState</seg>
+      </bo>
+    </element>
+    <element uuid="c5159edd-d0d3-42b0-9d41-30938da6d2a1" manual="true">
+      <element uuid="ce3636d9-5267-4afc-96dd-4d7c366bb0e5" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>displayFloor</seg>
+      </bo>
+      <bendpoints>
+        <point x="1476.0" y="210.0"/>
+        <point x="1476.0" y="130.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="29736a0e-2212-4984-973e-c2ccf00b6b69" manual="true">
+      <element uuid="d60f78d1-07df-4db9-8c52-47d72f8df450" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>displayUpDown</seg>
+      </bo>
+      <bendpoints>
+        <point x="1466.0" y="310.0"/>
+        <point x="1466.0" y="368.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="12550e7a-4c9a-44cf-8e3a-16ebe6be9108" manual="true">
+      <element uuid="05bee83e-45c3-4d61-adad-387df6006887" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>getCurrentFloor</seg>
+      </bo>
+      <bendpoints>
+        <point x="1070.0" y="230.0"/>
+        <point x="1070.0" y="260.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="e1055ddd-f9f3-407b-8bb4-4aab27858aec" manual="true">
+      <element uuid="db8f736d-1750-42d3-87f8-547718977a51" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>openCloseDoor</seg>
+      </bo>
+    </element>
+    <element uuid="2a4bf35d-8382-4126-98f0-c54b6e24816c" manual="true">
+      <element uuid="208fe296-16f2-4550-a6bc-063c026d822c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>updateFloor</seg>
+      </bo>
+      <bendpoints>
+        <point x="1070.0" y="210.0"/>
+        <point x="1070.0" y="180.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="41c602de-1004-40cf-af63-636693e556f3" manual="true">
+      <element uuid="869062d1-3bbe-4444-ad02-a6e3601c5417" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="16012ca6-461a-48d6-a234-699d463ce6d1" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>call_button_press</seg>
+        </bo>
+        <position x="213.48828887939453" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>callBtn</seg>
+      </bo>
+      <position x="246.0" y="268.0"/>
+      <size width="330.0" height="60.0"/>
+    </element>
+    <element uuid="403eaa06-e265-408e-922d-33cdb00ff25e" manual="true">
+      <element uuid="80614874-8aa9-4f91-8765-128e186bd258" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="ee7dccc8-1a1e-4983-bd9b-b70c0cb935fb" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>state</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>door</seg>
+      </bo>
+      <position x="1040.0" y="440.0"/>
+      <size width="249.0" height="110.0"/>
+    </element>
+    <element uuid="bced7902-e481-4f30-a417-9ce16141e905" manual="true">
+      <element uuid="1fc8e836-e099-4d10-aae7-d29a62aa72eb" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>openClose_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="6ef5d734-9bc8-4eef-b9fa-d5dddb47942c" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>openClose_out</seg>
+        </bo>
+        <position x="239.29947662353516" y="10.0"/>
+      </element>
+      <element uuid="f0abe0e3-ae51-4555-aef6-7edeccf45909" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>dde9cd92-2025-490e-adfe-f222c8c4c7fd</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>door_process</seg>
+      </bo>
+      <position x="600.0" y="490.0"/>
+      <size width="341.0" height="60.0"/>
+    </element>
+    <element uuid="a14783bb-6bad-437e-b9a3-9464b5f846ae" manual="true">
+      <element uuid="d505af47-7a0f-4b91-8f44-59de8ec36e1e" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="917e6b41-6be6-4a06-94a9-3b171cb0accc" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>pressed</seg>
+        </bo>
+        <position x="209.5651092529297" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>doorBtn</seg>
+      </bo>
+      <position x="210.0" y="490.0"/>
+      <size width="269.0" height="60.0"/>
+    </element>
+    <element uuid="2e12ee30-42f5-49f2-81f5-b3f29be08976" manual="true">
+      <element uuid="d022a74d-8b22-4fdc-94e6-a1f03c8960b8" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="76194079-31f2-4acb-ba1f-d539063b8f62" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>direction</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>engine</seg>
+      </bo>
+      <position x="1026.0" y="168.0"/>
+      <size width="262.0" height="110.0"/>
+    </element>
+    <element uuid="e39d6d1b-38d0-4cbf-bd5c-787acfc567f3" manual="true">
+      <element uuid="aaf3df1f-a8f6-43f0-af8a-f85bb26e1c4b" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="e9d67f8c-f900-4a00-a23b-35c05db9b017" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>button_press</seg>
+        </bo>
+        <position x="191.91016387939453" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>floorBtn</seg>
+      </bo>
+      <position x="271.0" y="348.0"/>
+      <size width="281.0" height="60.0"/>
+    </element>
+    <element uuid="73862d8d-2052-44fc-b396-2a280dbddee6" manual="true">
+      <element uuid="591995f7-1768-40f8-91ae-ab9d0589a444" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="cf8754bc-676b-42b6-95a0-739b6256a492" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>currentFloor</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>floorDisplay</seg>
+      </bo>
+      <position x="1026.0" y="38.0"/>
+      <size width="295.0" height="110.0"/>
+    </element>
+    <element uuid="c8d534a1-25a9-413e-8b05-ab360f32f4d7" manual="true">
+      <element uuid="e3aac6f3-8c57-44c6-a708-c922bec75a0d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="35.0"/>
+      </element>
+      <element uuid="8d8a42dd-01fb-46e4-b32b-f5d6b81c8fbb" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>reachedFloor_in</seg>
+        </bo>
+        <position x="249.6458282470703" y="10.0"/>
+      </element>
+      <element uuid="a5f03291-43a0-4158-99ad-22d523c7f9cb" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>reachedFloor_out</seg>
+        </bo>
+        <position x="241.48827362060547" y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>floorSensor</seg>
+      </bo>
+      <position x="232.0" y="138.0"/>
+      <size width="358.0" height="110.0"/>
+    </element>
+    <element uuid="d1c30e69-bafd-40e2-a017-f17756d9cc40" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>internal_bus</seg>
+      </bo>
+      <position x="42.0" y="358.0"/>
+      <size width="130.0" height="80.0"/>
+    </element>
+    <element uuid="dde9cd92-2025-490e-adfe-f222c8c4c7fd" manual="true">
+      <element uuid="cd87eb1f-10ce-4d3a-b512-efdbf389a06e" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>mainProcessor</seg>
+      </bo>
+      <position x="120.0" y="10.0"/>
+      <size width="311.0" height="60.0"/>
+    </element>
+    <element uuid="3bb5a72f-381e-4818-b3b8-2ece2fa5070f" manual="true">
+      <element uuid="529cf1db-69ab-47b6-88a9-90591e24a708" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>calledToFloor_in</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="416a9761-5ca4-44bd-82eb-6c1beacf48b7" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>currentFloor_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="8b30828c-5343-4623-9c8f-65fba7b87884" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>direction</seg>
+        </bo>
+        <position x="312.6028709411621" y="60.0"/>
+      </element>
+      <element uuid="60d6f24e-1bb6-436e-a8db-572920b1d443" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>finalFloor_out</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="011deb98-9ccf-43c8-b53e-b52ee78e4757" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>floor_out</seg>
+        </bo>
+        <position x="311.1119842529297" y="10.0"/>
+      </element>
+      <element uuid="7556eac4-6f03-4318-aa92-5228cfeb9ce8" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>upDown_out</seg>
+        </bo>
+        <position x="288.13021087646484" y="110.0"/>
+      </element>
+      <element uuid="3e341d2e-5de8-480e-ac73-e62e52d4793c" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>dde9cd92-2025-490e-adfe-f222c8c4c7fd</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>moving_process</seg>
+      </bo>
+      <position x="610.0" y="168.0"/>
+      <size width="375.0" height="160.0"/>
+    </element>
+    <element uuid="19aa7a87-33a3-4001-9ed0-8362a04c43c5" manual="true">
+      <element uuid="8276c092-55fd-4159-bfb7-c253d2198427" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="4e48762f-17da-490c-a67e-61f414539991" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>upDown</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>upDownDisplay</seg>
+      </bo>
+      <position x="1026.0" y="326.0"/>
+      <size width="315.0" height="110.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>ElevatorSystem.impl</seg>
+    </bo>
+    <position x="470.0"/>
+    <size width="1353.0" height="551.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties>
+      <property>deployment_properties::actual_processor_binding</property>
+    </enabledAadlProperties>
+    <context>
+      <seg>classifier</seg>
+      <seg>Elevator::ElevatorSystem.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

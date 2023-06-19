@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="ElevatorSystem_impl_Instance" category="system">
+  <componentInstance name="internal_bus" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusType" href="../Elevator.aadl#Elevator.internal_bus"/>
+  </componentInstance>
+  <componentInstance name="engine" category="device">
+    <featureInstance name="direction">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.21/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.Engine"/>
+  </componentInstance>
+  <componentInstance name="door" category="device">
+    <featureInstance name="state">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.19/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.ElevatorDoor"/>
+  </componentInstance>
+  <componentInstance name="callBtn" category="device">
+    <featureInstance name="call_button_press" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.CallButton"/>
+  </componentInstance>
+  <componentInstance name="floorBtn" category="device">
+    <featureInstance name="button_press" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.3"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.FloorButtons"/>
+  </componentInstance>
+  <componentInstance name="doorBtn" category="device">
+    <featureInstance name="pressed" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.13/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.4"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.DoorButton"/>
+  </componentInstance>
+  <componentInstance name="floorDisplay" category="device">
+    <featureInstance name="currentFloor">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.5"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.FloorDisplay"/>
+  </componentInstance>
+  <componentInstance name="upDownDisplay" category="device">
+    <featureInstance name="upDown">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.17/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.6"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.UpDownDisplay"/>
+  </componentInstance>
+  <componentInstance name="floorSensor" category="device">
+    <featureInstance name="reachedFloor_out" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="reachedFloor_in">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.23/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedDeviceSubcomponent.7"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Elevator.aadl#Elevator.FloorSensor"/>
+  </componentInstance>
+  <componentInstance name="moving_process" category="process">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="calledToFloor_in">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="currentFloor_in">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="direction" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="floor_out" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="upDown_out" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="finalFloor_out" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedDataPort.5"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessType" href="../Elevator.aadl#Elevator.moving_process"/>
+  </componentInstance>
+  <componentInstance name="door_process" category="process">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.11"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="openClose_in">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="openClose_out" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedProcessSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessType" href="../Elevator.aadl#Elevator.door_process"/>
+  </componentInstance>
+  <componentInstance name="mainProcessor" category="processor">
+    <featureInstance name="bus_access" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.25/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorImplementation" href="../Elevator.aadl#Elevator.MainProcessor.impl"/>
+  </componentInstance>
+  <connectionInstance name="internal_bus -> engine.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.1/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.1/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> door.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.2/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.2/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> callBtn.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.3/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.3/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> floorBtn.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.4/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.4/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> floorDisplay.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.6/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.6/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> upDownDisplay.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.7/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.7/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> floorSensor.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.8/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> doorBtn.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.5/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="internal_bus -> mainProcessor.bus_access" complete="true" kind="accessConnection" destination="//@componentInstance.11/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.11/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="engine.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.1/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="door.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.2/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.2/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="callBtn.call_button_press -> moving_process.calledToFloor_in" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.3/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.0" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="callBtn.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.3/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="floorBtn.button_press -> moving_process.calledToFloor_in" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.4/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.0" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="floorBtn.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.4/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="doorBtn.pressed -> door_process.openClose_in" complete="true" kind="portConnection" destination="//@componentInstance.10/@featureInstance.0" source="//@componentInstance.5/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.0" destination="//@componentInstance.10/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="doorBtn.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.5/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="floorDisplay.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.6/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="upDownDisplay.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.7/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="floorSensor.reachedFloor_out -> moving_process.currentFloor_in" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.1" source="//@componentInstance.8/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.8/@featureInstance.0" destination="//@componentInstance.9/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="floorSensor.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.8/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.8/@featureInstance.2" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="moving_process.direction -> engine.direction" complete="true" kind="portConnection" destination="//@componentInstance.1/@featureInstance.0" source="//@componentInstance.9/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.2" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="moving_process.floor_out -> floorDisplay.currentFloor" complete="true" kind="portConnection" destination="//@componentInstance.6/@featureInstance.0" source="//@componentInstance.9/@featureInstance.3">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.3" destination="//@componentInstance.6/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="moving_process.upDown_out -> upDownDisplay.upDown" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.9/@featureInstance.4">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.4" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="moving_process.finalFloor_out -> floorSensor.reachedFloor_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@featureInstance.1" source="//@componentInstance.9/@featureInstance.5">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.5" destination="//@componentInstance.8/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="door_process.openClose_out -> door.state" complete="true" kind="portConnection" destination="//@componentInstance.2/@featureInstance.0" source="//@componentInstance.10/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.1" destination="//@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="mainProcessor.bus_access -> internal_bus" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.11/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.11/@featureInstance.0" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../Elevator.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedAccessConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../Elevator.aadl#Elevator.ElevatorSystem.impl"/>
+</instance:SystemInstance>

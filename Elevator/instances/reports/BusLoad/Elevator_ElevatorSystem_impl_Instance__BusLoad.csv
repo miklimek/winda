@@ -1,0 +1,49 @@
+Bus load analysis of ElevatorSystem_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"internal_bus","0.0","0.0","0.0","0.0"
+
+"Bus internal_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"callBtn.call_button_press -> moving_process.calledToFloor_in","","0.0","","0.0"
+"floorBtn.button_press -> moving_process.calledToFloor_in","","0.0","","0.0"
+"doorBtn.pressed -> door_process.openClose_in","","0.0","","0.0"
+"floorSensor.reachedFloor_out -> moving_process.currentFloor_in","","0.0","","0.0"
+"moving_process.direction -> engine.direction","","0.0","","0.0"
+"moving_process.floor_out -> floorDisplay.currentFloor","","0.0","","0.0"
+"moving_process.upDown_out -> upDownDisplay.upDown","","0.0","","0.0"
+"moving_process.finalFloor_out -> floorSensor.reachedFloor_in","","0.0","","0.0"
+"door_process.openClose_out -> door.state","","0.0","","0.0"
+
+"WARNING: Bus internal_bus has no capacity"
+"WARNING: Bus internal_bus has no bandwidth budget"
+
+"Connection callBtn.call_button_press -> moving_process.calledToFloor_in bound to internal_bus"
+"WARNING: Connection callBtn.call_button_press -> moving_process.calledToFloor_in has no bandwidth budget"
+
+"Connection floorBtn.button_press -> moving_process.calledToFloor_in bound to internal_bus"
+"WARNING: Connection floorBtn.button_press -> moving_process.calledToFloor_in has no bandwidth budget"
+
+"Connection doorBtn.pressed -> door_process.openClose_in bound to internal_bus"
+"WARNING: Connection doorBtn.pressed -> door_process.openClose_in has no bandwidth budget"
+
+"Connection floorSensor.reachedFloor_out -> moving_process.currentFloor_in bound to internal_bus"
+"WARNING: Connection floorSensor.reachedFloor_out -> moving_process.currentFloor_in has no bandwidth budget"
+
+"Connection moving_process.direction -> engine.direction bound to internal_bus"
+"WARNING: Connection moving_process.direction -> engine.direction has no bandwidth budget"
+
+"Connection moving_process.floor_out -> floorDisplay.currentFloor bound to internal_bus"
+"WARNING: Connection moving_process.floor_out -> floorDisplay.currentFloor has no bandwidth budget"
+
+"Connection moving_process.upDown_out -> upDownDisplay.upDown bound to internal_bus"
+"WARNING: Connection moving_process.upDown_out -> upDownDisplay.upDown has no bandwidth budget"
+
+"Connection moving_process.finalFloor_out -> floorSensor.reachedFloor_in bound to internal_bus"
+"WARNING: Connection moving_process.finalFloor_out -> floorSensor.reachedFloor_in has no bandwidth budget"
+
+"Connection door_process.openClose_out -> door.state bound to internal_bus"
+"WARNING: Connection door_process.openClose_out -> door.state has no bandwidth budget"
+
+

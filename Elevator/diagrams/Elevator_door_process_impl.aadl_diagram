@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="712813ac-da57-4da4-94c8-896431054f0d" manual="true">
+    <element uuid="ea6f1034-6481-4113-97db-e310c41b6e4b" manual="true">
+      <element uuid="412be86e-cdf1-413a-8ffc-590e91e7547f" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>result</seg>
+      </bo>
+    </element>
+    <element uuid="d5205a23-14bb-4820-9c08-72e769513134" manual="true">
+      <element uuid="cb440711-c80d-43aa-96b8-971c3e8c7bdd" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>sendInput</seg>
+      </bo>
+    </element>
+    <element uuid="370db720-d3a6-49da-9b1d-7074a282e5d7" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>openClose_in</seg>
+      </bo>
+      <position y="48.0"/>
+    </element>
+    <element uuid="3bdeda74-79da-4287-a500-e55aa0785b3b" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>openClose_out</seg>
+      </bo>
+      <position x="739.9400863647461" y="48.0"/>
+    </element>
+    <element uuid="37acc3ad-a607-4346-b8ba-c674f936a247" manual="true">
+      <element uuid="c7e75700-c67d-4ee9-a247-08791cdc1733" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>doorState_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="463fd68b-dfc1-4fae-90df-2a78ae17ccb6" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>doorState_out</seg>
+        </bo>
+        <position x="239.68359375" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>openClose_thr</seg>
+      </bo>
+      <position x="290.78646087646484" y="38.0"/>
+      <size width="335.453125" height="60.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>door_process.impl</seg>
+    </bo>
+    <position/>
+    <size width="841.6406097412109" height="110.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>Elevator::door_process.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

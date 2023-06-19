@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="82bc7aee-b692-4209-973b-abce9fcbe4e1" manual="true">
+    <element uuid="615dd276-96d6-4a66-91d5-0bf429878bb4" manual="true">
+      <element uuid="e5a1da11-3bf8-4a61-8b95-2eb9016f4d07" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>callToFloor</seg>
+      </bo>
+    </element>
+    <element uuid="ab298850-6fa2-418c-9f69-0951ef4af5ec" manual="true">
+      <element uuid="e5188406-cb8b-4e50-86c4-29ccb7f3ab3e" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>changeDirection_in</seg>
+      </bo>
+    </element>
+    <element uuid="d18018f4-1200-4dd4-8a07-a2a947fe05c9" manual="true">
+      <element uuid="5e214139-d1ba-44a3-a2e6-7adea3ab5848" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>changeDirection_out</seg>
+      </bo>
+    </element>
+    <element uuid="dd2d06a9-358f-4676-ab41-064a0455a7ee" manual="true">
+      <element uuid="ecf0577c-a505-49c2-9c1d-b1f57f08fd77" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>currentFloor</seg>
+      </bo>
+    </element>
+    <element uuid="64c80abb-765a-4e8a-8d54-e8dd520a4192" manual="true">
+      <element uuid="a6ada283-6346-475e-96f7-45d68d16a8d6" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>displayCurrentFloor_in</seg>
+      </bo>
+    </element>
+    <element uuid="bcfb3826-f70a-45ae-ad5f-af288f7fd9dc" manual="true">
+      <element uuid="37321cdc-0fcf-4f2a-999b-17a9e1ad3f31" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>displayCurrentFloor_out</seg>
+      </bo>
+    </element>
+    <element uuid="93631053-9ebf-4cc1-9bde-3366debfc9f7" manual="true">
+      <element uuid="6273ff6f-25be-40af-a467-e351e70a0e7c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>displayUpDown_in</seg>
+      </bo>
+      <bendpoints>
+        <point x="1024.1666259765625" y="213.0"/>
+        <point x="1024.1666259765625" y="183.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b4e628d1-a991-42e6-842f-7c04485b67c4" manual="true">
+      <element uuid="a147060a-8041-4209-b983-979225f74446" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>displayUpDown_out</seg>
+      </bo>
+    </element>
+    <element uuid="c8e8f2e3-6643-4579-82ee-212b67d852e5" manual="true">
+      <element uuid="5cb87ae9-51fa-4b88-8cf6-8acaaeeafc55" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>newFloor</seg>
+      </bo>
+      <bendpoints>
+        <point x="617.5872192382812" y="80.0"/>
+        <point x="617.5872192382812" y="179.6666717529297"/>
+      </bendpoints>
+    </element>
+    <element uuid="aa9552cf-856f-4b84-9939-e10c0081e5d6" manual="true">
+      <element uuid="e2683b3a-3577-4d5f-9567-0aea6593af15" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>updateFloor</seg>
+      </bo>
+      <bendpoints>
+        <point x="1024.1666259765625" y="163.0"/>
+        <point x="1024.1666259765625" y="130.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="6190f1ac-2ae6-42ff-892e-768f287b074f" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>calledToFloor_in</seg>
+      </bo>
+      <position y="48.0"/>
+    </element>
+    <element uuid="5e86c25d-21e6-43c8-91e5-c491d1c4ab45" manual="true" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>currentFloor_in</seg>
+      </bo>
+      <position y="214.33333333333334"/>
+    </element>
+    <element uuid="0e0a2787-34f4-40a3-8fc3-a26aa782a806" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>direction</seg>
+      </bo>
+      <position x="1533.6652946472168" y="231.0"/>
+    </element>
+    <element uuid="e13b7878-7fcc-46a2-afcc-3f015f6fe00b" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>finalFloor_out</seg>
+      </bo>
+      <position x="1503.2746658325195" y="98.0"/>
+    </element>
+    <element uuid="bb41f669-761b-4387-9736-41df0ca42571" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>Floor_out</seg>
+      </bo>
+      <position x="1527.734302520752" y="48.0"/>
+    </element>
+    <element uuid="95bd89ce-e667-4cd9-a413-d85fc836d164" manual="true" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>UpDown_out</seg>
+      </bo>
+      <position x="1506.9790878295898" y="151.0"/>
+    </element>
+    <element uuid="531a874b-9e6e-4d66-bbcb-2017f06e92e4" manual="true">
+      <element uuid="d5cc113b-4938-4cc7-937c-fc6a94171fcf" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>floor_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="1ecd7e1d-f3d2-4452-9784-6333e9f87ee0" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>floor_out</seg>
+        </bo>
+        <position x="209.99609375" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>callToFloor_thr</seg>
+      </bo>
+      <position x="333.70313262939453" y="38.0"/>
+      <size width="273.8841094970703" height="60.0"/>
+    </element>
+    <element uuid="2df89755-13ac-4851-ab57-98377df17061" manual="true">
+      <element uuid="94ace39b-5a9f-46ac-8a44-2e58023a2a0b" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>currentFloor_in</seg>
+        </bo>
+        <position y="93.33333333333334"/>
+      </element>
+      <element uuid="7bb96abc-7ac4-4bdb-a38d-f33bbdec9faa" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>direction_out</seg>
+        </bo>
+        <position x="298.23177337646484" y="110.0"/>
+      </element>
+      <element uuid="384929bd-4fc6-4fa9-b572-4cb3bdfbe5ec" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>newFloor_in</seg>
+        </bo>
+        <position y="26.666666666666668"/>
+      </element>
+      <element uuid="8fae46e3-df65-4486-886e-861c207276d4" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>updatedFloor_out</seg>
+        </bo>
+        <position x="270.0546875" y="10.0"/>
+      </element>
+      <element uuid="25ab866f-ed87-4b9d-9f1b-0e92a2ec7970" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>upDown_out</seg>
+        </bo>
+        <position x="299.7096405029297" y="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>detectFloors_thr</seg>
+      </bo>
+      <position x="627.5872421264648" y="121.0"/>
+      <size width="386.57942962646484" height="160.0"/>
+    </element>
+    <element uuid="a467cc4a-79fd-4d94-be15-3865d65fc41a" manual="true">
+      <element uuid="885af4ee-f217-4f97-8338-e21fb576c243" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>floor_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="556351aa-af21-441f-b4f2-5ed133336ab9" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>floor_out</seg>
+        </bo>
+        <position x="215.93359375" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>displayFloor_thr</seg>
+      </bo>
+      <position x="680.9661521911621" y="38.0"/>
+      <size width="279.8216094970703" height="60.0"/>
+    </element>
+    <element uuid="51c63e2f-21cf-4999-9868-c74cbd6fa781" manual="true">
+      <element uuid="c73c3254-fa85-4fd7-8572-1009d0db0ba7" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>upDown_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="16f6a45a-3419-4757-b6d9-7119e904aad6" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>upDown_out</seg>
+        </bo>
+        <position x="259.6705780029297" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>displayUpDown_thr</seg>
+      </bo>
+      <position x="1034.166648864746" y="141.0"/>
+      <size width="346.54036712646484" height="60.0"/>
+    </element>
+    <element uuid="8a5c573e-d9ca-43a6-906c-76168f97a85f" manual="true">
+      <element uuid="32a46684-3166-407e-8618-9cb38b248032" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>direction_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="8436702a-7147-4522-99ce-9c7081b97138" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>direction_out</seg>
+        </bo>
+        <position x="247.0533905029297" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>moveToFloor_thr</seg>
+      </bo>
+      <position x="1039.7363090515137" y="221.0"/>
+      <size width="335.4010467529297" height="60.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>moving_process.impl</seg>
+    </bo>
+    <position/>
+    <size width="1596.0624237060547" height="293.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>Elevator::moving_process.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>
